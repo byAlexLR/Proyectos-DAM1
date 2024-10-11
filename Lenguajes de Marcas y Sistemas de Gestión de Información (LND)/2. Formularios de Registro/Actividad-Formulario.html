@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro Completo</title>
+</head>
+
+<body>
+    <h1>Formulario de Registro Completo</h1>
+    <form method="get">
+        <!-- Información Personal -->
+        <fieldset>
+            <legend><b>Información Personal</b></legend>
+
+            <!-- Nombre Obligarotio -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <!-- Email Obligatorio-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Contraseña Obligatoria -->
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <!-- Calendario fecha (Fecha de Nacimiento) -->
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+            <!-- Selección de fecha (Años con mínimo y máximo)-->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="120"><br><br>
+
+            <!-- Selección de género (Con botones) -->
+            <label>Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label>
+        </fieldset>
+
+        <!-- Preferencias -->
+        <fieldset>
+            <legend><b>Preferencias</b></legend>
+
+            <!-- Opciones de Selección Múltiple (Intereses) -->
+            <label>Intereses (selecciona todos los que apliquen):</label><br>
+            <input type="checkbox" id="deportes" name="intereses" value="deportes">
+            <label for="deportes">Deportes</label>
+            <input type="checkbox" id="musica" name="intereses" value="musica">
+            <label for="musica">Música</label>
+            <input type="checkbox" id="lectura" name="intereses" value="lectura">
+            <label for="lectura">Lectura</label>
+            <input type="checkbox" id="viajes" name="intereses" value="viajes">
+            <label for="viajes">Viajes</label><br><br>
+
+            <!-- Menú desplegable con opción definida (País) -->
+            <label for="pais">Seleccione su país:</label>
+            <select id="pais" name="pais">
+                <option value="" selected disabled>Selecciona un país</option>
+                <option value="españa">España</option>
+                <option value="mexico">México</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="peru">Perú</option>
+            </select>
+        </fieldset>
+
+        <!-- Dirección en Internet -->
+        <fieldset>
+            <legend><b>Dirección en Internet</b></legend>
+
+            <label for="ipv4">Dirección IPv4:</label><br>
+            <input type="text" id="ipv4" name="ipv4" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+                placeholder="Ej: 111.111.1.1">
+        </fieldset>
+
+        <!-- Información Adicional -->
+        <fieldset>
+            <legend><b>Información Adicional</b></legend>
+
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+        </fieldset><br>
+
+        <!-- Botones -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>
+    </form>
+</body>
+
+</html>
