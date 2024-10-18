@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivales de Música</title>
+    <!-- Estilo de la tabla -->
+    <style>
+        table {
+            /* Espacio entre celdas */
+            border-spacing: 4px;
+            /* Ancho de la tabla */
+            width: 700px;
+            /* Alineación de texto */
+            text-align: center;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            /* Borde para las celdas, filas y tabla */
+            border: 1px solid black;
+        }
+
+        th {
+            /* Texto en mayúsculas */
+            text-transform: uppercase;
+            /* Espacio interno */
+            padding: 10px;
+            /* Color de fondo */
+            background-color: rgb(127, 255, 212);
+        }
+
+        tr,
+        td {
+            /* Espacio interno en filas y celdas */
+            padding: 8px;
+            /* Color de fondo */
+            background-color: rgba(255, 240, 155, 0.245);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Festivales de Música: Experiencias Inolvidables</h1>
+
+        <!-- Navegación -->
+        <nav>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#populares">Festivales Populares</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Contenido -->
+    <main>
+
+        <article>
+            <!-- Sección de introducción -->
+            <section id="intro">
+                <h2>Introducción a los Festivales de Música</h2>
+                <p>Los festivales de música son <strong>eventos que reúnen a miles de amantes de la música</strong> para
+                    disfrutar de
+                    actuaciones en vivo, descubrir nuevos artistas y vivir experiencias únicas.</p>
+                <img src="https://uploads.tomorrowland.com/containers/assets/welcome/memory-lane/2023-1.jpg/e0d2fa874fd84e3a7d8f7852ee05e1dd/2023-1.webp"
+                    alt="Vista panorámica del escenario de Tomorrowland 2023 al atardecer" width="700px">
+            </section>
+
+            <!-- Sección de Festivales Populares (Tabla) -->
+            <section id="populares">
+                <h2>Festivales Populares</h2>
+                <h3><u>Comparativa de Festivales</u></h3>
+                <table>
+                    <tr>
+                        <th><em>Festival</em></th>
+                        <th><em>Ubicación</em></th>
+                        <th><em>Género Principal</em></th>
+                        <th><em>Duración</em></th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.tomorrowland.com" title="Tomorrowland" target="_blank">Tomorrowland</a></td>
+                        <td>Boom, Bélgica</td>
+                        <td>Electrónica</td>
+                        <td>3 días</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.coachella.com" title="Coachella" target="_blank">Coachella</a></td>
+                        <td>California, EE.UU.</td>
+                        <td>Variado</td>
+                        <td>3 días</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://ultramusicfestival.com" title="Ultra Music Festival" target="_blank">Ultra Music
+                                Festival</a></td>
+                        <td>Miami, EE.UU.</td>
+                        <td>Electrónica</td>
+                        <td>3 días</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Sección de Consejos -->
+            <section id="consejos">
+                <h2>Consejos para Asistir a Festivales</h2>
+                <ol>
+                    <li>Planifica con anticipación.</li>
+                    <li>Lleva ropa cómoda.</li>
+                    <li>Mantente hidratado.</li>
+                    <li>Protege tu piel del sol.</li>
+                </ol>
+                <h4><u>Dato Curioso</u></h4>
+                <p>
+                <blockquote>El festival de <strong>Tomorrowland en 2012, agotó todas sus entradas en menos de un
+                        segundo</strong>,
+                    convirtiéndose en uno de los festivales más exclusivos del mundo.</blockquote>
+                </p>
+            </section>
+        </article>
+
+        <!-- Vídeo -->
+        <aside>
+            <h3>Experiencias de Festival</h3>
+            <p>Disfruta de este video que captura la esencia de los festivales de música:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oVE3EXB_Od8"
+                title="We Are Tomorrow 2024 l Documentary" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </aside>
+
+        <!-- Contacto y Suscripción -->
+        <section id="contacto">
+            <!-- Formulario -->
+            <h2>Contacto y Suscripción</h2>
+            <form method="get">
+                <fieldset>
+                    <legend><b>Información Personal</b></legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><b>Géneros Musicales Preferidos</b></legend>
+                    <input type="checkbox" id="rock" name="genero" value="rock">
+                    <label for="rock">Rock</label>
+                    <input type="checkbox" id="electronica" name="genero" value="electronica">
+                    <label for="electronica">Electrónica</label>
+                    <input type="checkbox" id="pop" name="genero" value="pop">
+                    <label for="pop">Pop</label><br><br>
+
+                    <label for="favorito">Festival Favorito:</label>
+                    <select id="favorito" name="favorito">
+                        <option value="" selected disabled>Selecciona un festival</option>
+                        <option value="tomorrowland">Tomorrowland</option>
+                        <option value="coachella">Coachella</option>
+                        <option value="ultra">Ultra Music Festival</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><b>Cuentanos Más</b></legend>
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                </fieldset><br>
+                <button type="submit">Suscribirse</button>
+            </form>
+
+            <!-- Google Maps -->
+            <section>
+                <h5>Ubicación de nuestra oficina:</h5>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44246.27183380634!2d-113.35681684193536!3d34.48706585739809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d2f79d6df2a0d7%3A0x3a207c1735cf3190!2sNothing%2C%20Arizona%2085360%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1729253494806!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <!-- Uso del tel: y H6-->
+            <section>
+                <h6>Información adicional:</h6>
+                <p>También nos puedes llamar al: <a href="tel:+34911111111">+34 911111111</a></p>
+            </section>
+        </section>
+        <br>
+    </main>
+
+    <!-- Pie de Página (Fecha, Mail y Nombre) -->
+    <hr>
+    <footer>
+        <p>Última atualización: <time datetime="2024-10-18">18 de octubre de 2024</time><br><br><em>Contacto: </em><a
+                href="mailto:info@festivalesdemusica.com"
+                title="Enviar correo a info@festivalesdemusica.com">info@festivalesdemusica.com</a>
+            <br>Nombre del alumno: Alejandro Lorenzo
+        </p>
+    </footer>
+</body>
+
+</html>
