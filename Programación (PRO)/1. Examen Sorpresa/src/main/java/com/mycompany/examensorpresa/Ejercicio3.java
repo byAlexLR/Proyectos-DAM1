@@ -15,7 +15,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //Cículo
-        System.out.println("Ciculo:"); //Dice el apartado
+        System.out.println("Circulo:"); //Dice el apartado
         System.out.print("Introduce el diametro: "); //Imprime el mensaje al usuario
         double circulo1 = sc.nextDouble(); //Lee lo escrito y se hace la variable
         double area = 2 * Math.PI * circulo1; //Formula 
@@ -23,7 +23,7 @@ public class Ejercicio3 {
 
         //Triángulo
         System.out.println("Triangulo:"); //Dice el apartado
-        System.out.print("Introduce el base: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la base: "); //Imprime el mensaje al usuario
         double trian1 = sc.nextInt(); //Lee lo escrito y se hace la variable
         double area2 = trian1 + trian1 + trian1; //Formula suma de tres lados
         System.out.println("El perimetro del triangulo es: " + area2); //Dice el resultado
@@ -37,9 +37,9 @@ public class Ejercicio3 {
 
         //Rectángulo
         System.out.println("Rectangulo:"); //Dice el apartado
-        System.out.print("Introduce el base: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la base: "); //Imprime el mensaje al usuario
         double recta1 = sc.nextInt(); //Lee lo escrito y se hace la variable
-        System.out.print("Introduce el altura: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la altura: "); //Imprime el mensaje al usuario
         double recta2 = sc.nextInt(); //Lee lo escrito y se hace la variable
         double area4 = 2 * (recta1 + recta2); //Formula base+altura por 2
         System.out.println("El perimetro del rectangulo es: " + area4); //Dice el resultado
