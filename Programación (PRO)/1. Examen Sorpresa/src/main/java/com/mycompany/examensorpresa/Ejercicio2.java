@@ -17,9 +17,10 @@ public class Ejercicio2 {
         double precio, iva = 0.07; //Variable precio e iva
         
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nombre: "); //Imprime mensaje al usuario
+        System.out.print("Tienda de informatica");
+        System.out.print("Introduce su nombre: "); //Imprime mensaje al usuario
         nombre = sc.nextLine(); //Lee
-        System.out.println("¡Bienvenido/a " + nombre + "!"); //Imprime mensaje de bienvenida
+        System.out.println("¡Bienvenido/a " + nombre + ", a la tienda!"); //Imprime mensaje de bienvenida
         
         System.out.print("Introduce el importe del producto: "); //Imprime mensaje a usuario
         precio = sc.nextDouble(); //Lee
