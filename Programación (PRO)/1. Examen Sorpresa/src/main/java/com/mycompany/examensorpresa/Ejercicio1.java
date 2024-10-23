@@ -15,7 +15,7 @@ public class Ejercicio1 {
         
         Scanner sc = new Scanner(System.in);
         //Cículo
-        System.out.println("Ciculo:"); //Dice el apartado
+        System.out.println("Circulo:"); //Dice el apartado
         System.out.print("Introduce el radio: "); //Imprime el mensaje al usuario
         double radio = sc.nextDouble(); //Lee lo escrito y se hace la variable
         double area = Math.PI * Math.pow(radio, 2); //Formula radio
@@ -23,9 +23,9 @@ public class Ejercicio1 {
         
         //Triángulo
         System.out.println("Triangulo:"); //Dice el apartado
-        System.out.print("Introduce el base: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la base: "); //Imprime el mensaje al usuario
         double trian1 = sc.nextInt(); //Lee lo escrito y se hace la variable
-        System.out.print("Introduce el altura: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la altura: "); //Imprime el mensaje al usuario
         double trian2 = sc.nextInt(); //Lee lo escrito y se hace la variable
         double area2 = (trian1 * trian2) / 2; //Formula base por altura entre 2
         System.out.println("El area del triangulo es: " + area2); //Dice el resultado
@@ -39,9 +39,9 @@ public class Ejercicio1 {
         
         //Rectángulo
         System.out.println("Rectangulo:"); //Dice el apartado
-        System.out.print("Introduce el base: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la base: "); //Imprime el mensaje al usuario
         double recta1 = sc.nextInt(); //Lee lo escrito y se hace la variable
-        System.out.print("Introduce el altura: "); //Imprime el mensaje al usuario
+        System.out.print("Introduce la altura: "); //Imprime el mensaje al usuario
         double recta2 = sc.nextInt(); //Lee lo escrito y se hace la variable
         double area4 = recta1 * recta2; //Formula base por altura
         System.out.println("El area del rectangulo es: " + area4); //Dice el resultado
