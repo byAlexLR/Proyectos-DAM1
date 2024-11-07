@@ -1,0 +1,46 @@
+/*Le aplica los estilos al body.*/
+body { 
+    background: steelblue; /*Le pone un color de fondo, en este caso azul.*/
+    color: #eee; /*Le pone color a las letras y fichas, en este caso blanco.*/
+    font-family: sans-serif; /*Le aplica una fuente predefinida.*/
+    text-align: center; /*Centra el texto y los elementos dentro del body.*/
+}
+
+/*Le aplica los estilos al contenedor #tablero.*/
+#tablero { 
+    margin-top: 50px; /*Aplica un margen superior al tablero de 50 px.*/
+    background: url(http://img.freepik.com/free-photo/wooden-texture_1160-686.jpg?size=338&amp;ext=jpg); /*Le aplica un fondo al contenedor #tablero, es decir, al div.*/
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6); /*Le aplica una sombra al contenedor que sobresale por debajo.*/
+    border-radius: 3px; /* Redondea los bordes del elemento con un radio de 3px.*/
+    border-collapse: collapse; /*Elimina los espacios entre celdas, haciendo que las celdas compartan un único borde.*/
+    height: 400px; /*Le aplica unas dimensiones al tablero de 400px de alto.*/
+    width: 400px; /*Le aplica unas dimensiones al tablero de 400px de ancho.*/
+    position: absolute; /*Posiciona el contenedor de manera absoluta en relación con su contenedor más cercano (h1).*/
+    top: 30px; /*Añade una separación superior de 30px.*/
+    right: 0; /*Posiciona el borde derecho en el borde derecho del contenedor.*/
+    bottom: 0; /*Posiciona el borde inferior en el borde inferior del contenedor.*/
+    left: 0; /*Posiciona el borde izquierdo en el borde izquierdo del contenedor.*/
+    margin: auto; /*Le aplica un margen automático a los lados del contenedor para centrarlo.*/
+}
+
+/*Le aplica los estilos al hijo de div, que a su vez es hijo de tablero.*/
+#tablero div div { 
+    color: #222; /*Le aplica un color a las fichas del div.*/
+    float: left; /*Hace que los elementos dentro del div se alineen a la izquierda.*/
+    font-size: 36px; /*Le aplica un tamaño de fuente de 36px.*/
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .6); /*Aplica una sombra suave (semi-transparente 60%), desplazada 1px a abajo y a la derecha, con un desenfoque de 1px.*/
+    width: 50px; /*Establece el ancho de las fichas a 50px.*/
+    height: 50px; /*Establece el alto de las fichas a 50px.*/
+}
+
+/*Le aplica un color de fondo a las celdas pares de las filas pares y a las celdas impares de las filas impares.*/
+#tablero div:nth-child(odd) div:nth-child(even),
+#tablero div:nth-child(even) div:nth-child(odd) {
+    background: rgba(0, 0, 0, .4); /*Le aplica un fondo negro (semi-transparente 40%), a líneas establecidas anteriormente.*/
+}
+
+/*Le aplica los estilos desde la línea 7 en adelante, pillando la línea 7 y 8.*/
+#tablero div:nth-child(n+7) div { 
+    color: #fff; /*Le aplica el color blanco a las fichas dentro de los divs, seleccionados en la formúla anterior.*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6); /*Aplica una sombra suave (semi-transparente 60%), desplazada 1px a abajo y a la derecha, con un desenfoque de 1px.*/
+}
