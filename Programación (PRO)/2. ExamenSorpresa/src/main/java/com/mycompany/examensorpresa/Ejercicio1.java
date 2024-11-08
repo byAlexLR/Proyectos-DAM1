@@ -25,8 +25,8 @@ public class Ejercicio1 {
     }
 
     public static void AreaTriangulo() { // Método
-        double base = Double.parseDouble(JOptionPane.showInputDialog("(Triangulo)Indica el base:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
-        double altura = Double.parseDouble(JOptionPane.showInputDialog("(Triangulo)Indica el altura:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
+        double base = Double.parseDouble(JOptionPane.showInputDialog("(Triangulo)Indica la base:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
+        double altura = Double.parseDouble(JOptionPane.showInputDialog("(Triangulo)Indica la altura:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
         double area = (base * altura) / 2; // Fórmula base por altura entre dos.
         JOptionPane.showMessageDialog(null, "El area del triangulo es: " + area); // Dice el resultado.
     }
@@ -38,8 +38,8 @@ public class Ejercicio1 {
     }
 
     public static void AreaRectangulo() { // Método
-        double base = Double.parseDouble(JOptionPane.showInputDialog("(Rectangulo)Indica el base:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
-        double altura = Double.parseDouble(JOptionPane.showInputDialog("(Rectangulo)Indica el altura:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
+        double base = Double.parseDouble(JOptionPane.showInputDialog("(Rectangulo)Indica la base:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
+        double altura = Double.parseDouble(JOptionPane.showInputDialog("(Rectangulo)Indica la altura:")); // Crea la variable e imprime un mensaje, y lee lo que establece el usuario.
         double area = base * altura; // Fórmula base por altura.
         JOptionPane.showMessageDialog(null, "El area del rectangulo es: " + area); // Dice el resultado.
     }
