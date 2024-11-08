@@ -32,11 +32,11 @@ public class Ejercicio3 {
     public static void PerimetroTriangulo(Scanner sc) { // Método e importamos las variables del main necesarias.
         // Triángulo
         System.out.println("Triangulo:"); // Dice el apartado.
-        System.out.print("Introduce lado A: "); // Imprime el mensaje al usuario.
+        System.out.print("Introduce el lado A: "); // Imprime el mensaje al usuario.
         double ladoa = sc.nextDouble(); // Lee lo escrito y se hace la variable.
-        System.out.print("Introduce lado B: "); // Imprime el mensaje al usuario.
+        System.out.print("Introduce el lado B: "); // Imprime el mensaje al usuario.
         double ladob = sc.nextDouble(); // Lee lo escrito y se hace la variable.
-        System.out.print("Introduce lado C: "); // Imprime el mensaje al usuario.
+        System.out.print("Introduce el lado C: "); // Imprime el mensaje al usuario.
         double ladoc = sc.nextDouble(); // Lee lo escrito y se hace la variable.
         double perimetro = ladoa + ladob + ladoc; // Fórmula suma de tres lados (lado A, lado B y lado C).
         System.out.println("El perimetro del triangulo es: " + perimetro); // Dice el resultado.
@@ -54,9 +54,9 @@ public class Ejercicio3 {
     public static void PerimetroRectangulo(Scanner sc) { // Método e importamos las variables del main necesarias.
         // Rectángulo
         System.out.println("Rectangulo:"); // Dice el apartado.
-        System.out.print("Introduce el base: "); // Imprime el mensaje al usuario.
+        System.out.print("Introduce la base: "); // Imprime el mensaje al usuario.
         double base = sc.nextInt(); // Lee lo escrito y se hace la variable.
-        System.out.print("Introduce el altura: "); // Imprime el mensaje al usuario.
+        System.out.print("Introduce la altura: "); // Imprime el mensaje al usuario.
         double altura = sc.nextInt(); // Lee lo escrito y se hace la variable.
         double perimetro = 2 * (base + altura); // Fórmula base más altura por 2.
         System.out.println("El perimetro del rectangulo es: " + perimetro); // Dice el resultado.
