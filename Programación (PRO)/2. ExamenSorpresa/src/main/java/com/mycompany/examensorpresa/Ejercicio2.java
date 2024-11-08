@@ -14,7 +14,7 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // Inicia la variable scanner.
-        double igic = 0.21; // Inicia la variable IGIC con el valor predefinido.
+        double igic = 0.07; // Inicia la variable IGIC con el valor predefinido.
         TiendaInformatica(sc, igic); // Llamamos al metodo con dos variables sc e igic.
     }
 
