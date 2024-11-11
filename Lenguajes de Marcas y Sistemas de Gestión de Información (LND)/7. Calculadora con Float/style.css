@@ -1,0 +1,47 @@
+* {
+    margin: 0;  /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
+h1 {
+    color: black;  /* Color del texto del título */
+    margin-top: 30px;  /* Espacio por encima del título */
+}
+
+body {
+    background: white;  /* Fondo blanco */
+    text-align: center;  /* Centra el texto del cuerpo (<body>) */
+}
+
+#calculadora {
+    background: #c4c4c3;  /* Fondo gris claro para la calculadora */
+    border: 2.5px solid black;  /* Borde de 2.5px de grosor y color negro */
+    height: 400px;  /* Altura de la calculadora */
+    width: 400px;   /* Ancho de la calculadora */
+    position: absolute;  /* Posición absoluta para colocarla donde queramos */
+    top: 30px;  /* Espacio desde la parte superior */
+    right: 0;   /* Alinea a la derecha */
+    bottom: 0;  /* Alinea en la parte inferior */
+    left: 0;    /* Alinea a la izquierda */
+    margin: auto;  /* Centra la calculadora horizontal y verticalmente */
+}
+
+#pantalla {
+    background-color: #dcecec;  /* Fondo azul claro para la pantalla de la calculadora */
+    border: 1px solid black;  /* Borde de 1px de grosor y color negro, alrededor de la pantalla */
+    height: 80px;  /* Altura de la pantalla */
+    width: 390px;  /* Ancho de la pantalla */
+    margin: 5px;  /* Margen de 5px alrededor de la pantalla */
+}
+
+#teclado div div {
+    font-family: Arial, Helvetica, sans-serif;  /* Fuente de las teclas */
+    font-weight: bold;  /* Texto en negrita */
+    border: 1px solid black;  /* Borde de 1px de grosor y color negro para cada tecla */
+    color: #222;  /* Color del texto de las teclas */
+    margin: 3px;  /* Margen de 3px entre las teclas */
+    float: left;  /* Las teclas se alinean a la izquierda dentro del contenedor */
+    font-size: 30px;  /* Tamaño de la fuente de las teclas */
+    width: 92px;  /* Ancho de cada tecla */
+    line-height: 69px;  /* Alineación vertical del texto dentro de la tecla */
+}
