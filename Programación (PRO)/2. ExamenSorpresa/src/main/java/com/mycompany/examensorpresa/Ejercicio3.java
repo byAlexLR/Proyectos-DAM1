@@ -23,9 +23,9 @@ public class Ejercicio3 {
     public static void PerimetroCirculo(Scanner sc) { // Método e importamos las variables del main necesarias.
         // Cículo
         System.out.println("Ciculo:"); // Dice el apartado.
-        System.out.print("Introduce el diametro: "); // Imprime el mensaje al usuario.
-        double diametro = sc.nextDouble();  //Lee lo escrito y se hace la variable.
-        double perimetro = 2 * Math.PI * diametro; // Fórmula 2 por PI por el diámetro. 
+        System.out.print("Introduce el radio: "); // Imprime el mensaje al usuario.
+        double radio = sc.nextDouble();  //Lee lo escrito y se hace la variable.
+        double perimetro = 2 * Math.PI * radio; // Fórmula 2 por PI por el diámetro. 
         System.out.println("El perimetro del circulo es: " + perimetro); // Dice el resultado.
     }
 
