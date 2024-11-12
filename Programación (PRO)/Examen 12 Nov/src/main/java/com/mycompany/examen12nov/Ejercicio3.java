@@ -14,7 +14,7 @@ public class Ejercicio3 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // Inicio la variable Scanner.
-        System.out.println("¡Bienveido al conversor de grados y pesetas!"); // Imprime un mensaje de bienvenida con lo que va a realizar.
+        System.out.println("¡Bienvenido al conversor de grados y pesetas!"); // Imprime un mensaje de bienvenida con lo que va a realizar.
         Grados(sc); // Llama al método Grados con la variable sc (Scanner).
         Pesetas(sc); // Llama al método Pesetas con la variable sc (Scanner).
     }
