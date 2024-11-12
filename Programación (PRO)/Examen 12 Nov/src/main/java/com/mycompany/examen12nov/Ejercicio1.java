@@ -14,7 +14,7 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // Inicio la variable Scanner.
         Bienvenida(sc); // Llama al método Bienvenida con la variable sc (Scanner).
-        NotaFinal(sc); // Llama al método Bienvenida con la variable sc (NotaFinal).
+        NotaFinal(sc); // Llama al método NotaFinal con la variable sc (NotaFinal).
     }
 
     public static void Bienvenida(Scanner sc) { // Creo el método importando la variable Scanner. 
