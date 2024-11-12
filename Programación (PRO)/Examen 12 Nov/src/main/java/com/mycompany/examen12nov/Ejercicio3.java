@@ -23,15 +23,15 @@ public class Ejercicio3 {
         System.out.println("- Apartado Grados"); // Imprime un mensaje comunicando el apartado.
         System.out.print("Podria introducir los grados: "); // Imprime un mensaje indicando que introduzca los grados.
         double grados = sc.nextDouble(); // Crea la variable (grados) y lee lo que puso el usuario.
-        double fahrenheit = 32 + (9 * grados / 5); // Creo la fórmula de conversión.
+        double fahrenheit = 32.0 + (9.0 * grados / 5.0); // Creo la fórmula de conversión.
         System.out.println("Los " + grados + " grados centigrados (ºC), equivalen a " + String.format("%.1f", fahrenheit) + " grados fahrenheit (ºF)."); // Imprime un mensaje final, comentando los grados introducidos a lo que equivale.
     }
 
     public static void Pesetas(Scanner sc) { // Creo el método importando la variable Scanner.
         System.out.println("- Apartado Pesetas"); // Imprime un mensaje comunicando el apartado.
         System.out.print("Podria introducir la cantidad de euros: "); // Imprime un mensaje indicando que introduzca la cantidad de euros.
-        int euros = sc.nextInt(); // Crea la variable (euros) y lee lo que puso el usuario.
-        int pesetas = euros * 166386; // Creo la fórmula de conversión.
-        System.out.println("La cantidad de " + euros + " euros, equivale a " + pesetas + " pesetas."); // Imprime un mensaje final, comentando los euros introducidos a lo que equivale.
+        double euros = sc.nextInt(); // Crea la variable (euros) y lee lo que puso el usuario.
+        double pesetas = euros * 166.386; // Creo la fórmula de conversión.
+        System.out.println("La cantidad de " + euros + " euros, equivale a " + String.format("%.2f", pesetas) + " pesetas."); // Imprime un mensaje final, comentando los euros introducidos a lo que equivale.
     }
 }
