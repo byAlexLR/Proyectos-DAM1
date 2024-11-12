@@ -18,7 +18,7 @@ public class Ejercicio1 {
     }
 
     public static void Bienvenida(Scanner sc) { // Creo el método importando la variable Scanner. 
-        System.out.println("¡Bienveido al aula virtual!"); // Imprime un mensaje de bienvenida al aula virtual.
+        System.out.println("¡Bienvenido al aula virtual!"); // Imprime un mensaje de bienvenida al aula virtual.
         System.out.print("Podria indicar su nombre: "); // Imprime un mensaje para indicarle que ponga su nombre.
         String nombre = sc.nextLine(); // Crea la variable y lee lo que puso el usuario.
         System.out.println("¡Bienvenido, " + nombre + "!"); // Imprime el mensaje de bienvenida personalizado.
