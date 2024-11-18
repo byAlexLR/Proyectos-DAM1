@@ -1,0 +1,65 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo general del menú */
+.menu ul {
+  background-color: #00bf89; /* Color de fondo del menú principal */
+  list-style: none; /* Elimina los puntos de las listas */
+}
+
+/* Estilo para los elementos de la lista del menú */
+.menu li {
+  float: left; /* Hace que los elementos se alineen horizontalmente */
+  position: relative; /* Necesario para posicionar los submenús */
+  min-width: 180px; /* Ancho mínimo para cada ítem del menú */
+}
+
+/* Estilo para los enlaces dentro de los elementos de la lista */
+.menu ul li a {
+  background-color: #00bf89; /* Color de fondo de los enlaces */
+  color: white; /* Color del texto */
+  display: block; /* Hace que el enlace ocupe todo el área de su contenedor */
+  font: bold 18px/20px arial; /* Fuente del texto: negrita, tamaño 18px y altura de línea 20px */
+  padding: 15px 25px; /* Espaciado interno del enlace */
+  text-align: center; /* Alineación del texto en el centro */
+  text-decoration: none; /* Elimina el subrayado del texto */
+}
+
+/* Estilo para los enlaces cuando se pasa el cursor sobre ellos */
+.menu li:hover > a {
+  background-color: #00a085; /* Cambio de color de fondo cuando el ítem es hover */
+}
+
+/* Estilo para los submenús (listas dentro de listas) */
+.menu ul li ul {
+  left: 0; /* Alinea el submenú al borde izquierdo de su contenedor */
+  display: none; /* Oculta los submenús por defecto */
+  position: absolute; /* Posiciona el submenú de forma absoluta */
+  background-color: #00bf89; /* Color de fondo de los submenús */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Agrega sombra al submenú para un efecto de profundidad */
+}
+
+/* Muestra el submenú cuando el ítem del menú es hover */
+.menu ul li:hover > ul {
+  display: block; /* Muestra el submenú al hacer hover */
+}
+
+/* Estilo para los elementos de la lista dentro del submenú */
+.menu ul li ul li {
+  float: none; /* Hace que los elementos dentro del submenú se alineen verticalmente */
+}
+
+/* Estilo para los sub-submenús (submenús dentro de submenús) */
+.menu ul li ul li ul {
+  left: 100%; /* Posiciona el sub-submenú al lado derecho del submenú */
+  top: 0; /* Alinea el sub-submenú con el submenú */
+}
+
+/* Estilo para los enlaces dentro de los submenús */
+.menu ul li ul li a {
+  padding: 10px 15px; /* Ajuste del espaciado interno para los enlaces de submenú */
+  border-bottom: 1px solid rgba(0, 255, 166, 0.3); /* Agrega un borde sutil debajo de los enlaces del submenú */
+}
