@@ -37,7 +37,6 @@
   left: 0; /* Alinea el submenú al borde izquierdo de su contenedor */
   display: none; /* Oculta los submenús por defecto */
   position: absolute; /* Posiciona el submenú de forma absoluta */
-  background-color: #00bf89; /* Color de fondo de los submenús */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Agrega sombra al submenú para un efecto de profundidad */
 }
 
