@@ -18,10 +18,10 @@
 
 /* Estilo para los enlaces dentro de los elementos de la lista */
 .menu ul li a {
-  background-color: #00bf89; /* Color de fondo de los enlaces */
-  color: white; /* Color del texto */
+  background-color: var(--colorFondo); /* Color de fondo de los enlaces */
+  color: var(--colorTexto); /* Color del texto */
   display: block; /* Hace que el enlace ocupe todo el área de su contenedor */
-  font: bold 18px/20px arial; /* Fuente del texto: negrita, tamaño 18px y altura de línea 20px */
+  font: var(--fuenteTexto); /* Fuente del texto: negrita, tamaño 18px y altura de línea 20px */
   padding: 15px 25px; /* Espaciado interno del enlace */
   text-align: center; /* Alineación del texto en el centro */
   text-decoration: none; /* Elimina el subrayado del texto */
@@ -29,7 +29,7 @@
 
 /* Estilo para los enlaces cuando se pasa el cursor sobre ellos */
 .menu li:hover > a {
-  background-color: #00a085; /* Cambio de color de fondo cuando el ítem es hover */
+  background-color: var(--colorSeleccion); /* Cambio de color de fondo cuando el ítem es hover */
 }
 
 /* Estilo para los submenús (listas dentro de listas) */
@@ -37,7 +37,7 @@
   left: 0; /* Alinea el submenú al borde izquierdo de su contenedor */
   display: none; /* Oculta los submenús por defecto */
   position: absolute; /* Posiciona el submenú de forma absoluta */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Agrega sombra al submenú para un efecto de profundidad */
+  box-shadow: var(--sombraSubmenu); /* Agrega sombra al submenú para un efecto de profundidad */
 }
 
 /* Muestra el submenú cuando el ítem del menú es hover */
@@ -59,5 +59,5 @@
 /* Estilo para los enlaces dentro de los submenús */
 .menu ul li ul li a {
   padding: 10px 15px; /* Ajuste del espaciado interno para los enlaces de submenú */
-  border-bottom: 1px solid rgba(0, 255, 166, 0.3); /* Agrega un borde sutil debajo de los enlaces del submenú */
+  border-bottom: var(--bordeSutil); /* Agrega un borde sutil debajo de los enlaces del submenú */
 }

@@ -1,0 +1,8 @@
+:root {
+    --colorFondo: #b2bf00;
+    --colorSeleccion: #a09d00;
+    --colorTexto: #000000;
+    --fuenteTexto: bold 18px/20px sans-serif;
+    --sombraSubmenu: 2px 2px 5px rgba(255, 0, 0, 0.5);
+    --bordeSutil: 1px solid rgba(251, 255, 0, 0.3);
+}
