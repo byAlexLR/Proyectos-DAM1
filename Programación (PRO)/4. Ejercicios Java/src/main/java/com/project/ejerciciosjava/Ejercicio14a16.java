@@ -62,27 +62,23 @@ public class Ejercicio14a16 {
 
     public static void esPrimo(Scanner sc) { // Método e importamos las variables del main necesarias.
         System.out.println("- EJERCICIO 16 (¿ES PRIMO?) -"); // Dice el apartado.
-
-        boolean esPrimo = true; // Inicializa la variable que indicará si el número es primo.
-
+        
         System.out.print("Introduce un número: "); // Solicita al usuario que ingrese un número.
         int num = sc.nextInt(); // Lee lo escrito y se hace la variable.
 
-        if (num <= 1) { // Si el número es menor o igual a 1, no puede ser primo.
-            System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje comunicandolo.
-            return; // Sale del método.
-        }
-
-        for (int i = 2; i <= Math.sqrt(num); i++) { // Bucle for: verifica si el número es divisible por algún número entre 2 y la raíz cuadrada de "num".
-            if ((num % i) == 0) { // Si el número es divisible por i, no es primo.
-                System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje si no es primo.
-                esPrimo = false; // Marca que el número no es primo.
-                break; // Sale del bucle.
+        if (num <= 1) { // Si el número es menor o igual a 1, no se considera primo.
+            System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje indicando que no es primo.
+            return; // Termina la ejecución del método.
+        } else { // Sino, buscará si el número introducido es primo o no.
+            for (int i = 2; i <= Math.sqrt(num); i++) { // Itera desde 2 hasta la raíz cuadrada de "num" para verificar si "num" es divisible por algún número en este rango.
+                if ((num % i) == 0) { // Si "num" es divisible por "i", no es primo.
+                    System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje indicando que no es primo.
+                    break; // Termina el bucle porque ya se ha determinado que no es primo.
+                } else { // Si no se ha encontrado ningún divisor, el número es primo.
+                    System.out.println("El número " + num + " es un número primo."); // Muestra un mensaje indicando que es primo.
+                    break; // Termina el bucle porque ya se ha determinado que es primo.
+                }
             }
-        }
-
-        if (esPrimo) {  // Si no se ha encontrado ningún divisor, el número es primo
-            System.out.println("El número " + num + " es un número primo."); // Muestra un mensaje si es primo.
         }
     }
 }
