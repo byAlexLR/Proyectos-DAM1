@@ -70,17 +70,14 @@ public class Ejercicio14a16 {
 
         if (num <= 1) { // Si el número es menor o igual a 1, no se considera primo.
             System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje indicando que no es primo.
-            return; // Termina la ejecución del método.
         } else { // Sino, buscará si el número introducido es primo o no.
             for (int i = 2; i <= Math.sqrt(num); i++) { // Itera desde 2 hasta la raíz cuadrada de "num" para verificar si "num" es divisible por algún número en este rango.
                 if ((num % i) == 0) { // Si "num" es divisible por "i", no es primo.
                     System.out.println("El número " + num + " no es un número primo."); // Muestra un mensaje indicando que no es primo.
-                    break; // Termina el bucle porque ya se ha determinado que no es primo.
-                } else { // Si no se ha encontrado ningún divisor, el número es primo.
-                    System.out.println("El número " + num + " es un número primo."); // Muestra un mensaje indicando que es primo.
-                    break; // Termina el bucle porque ya se ha determinado que es primo.
+                    return; // Termina el bucle porque ya se ha determinado que no es primo.
                 }
             }
+            System.out.println("El número " + num + " es un número primo.");
         }
     }
 }
