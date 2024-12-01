@@ -57,6 +57,8 @@ public class Ejercicio14a16 {
                 System.out.println("El " + dia + " es día laborable.");  // Si el día es uno de los días laborables.
             case "sabado", "domingo" ->
                 System.out.println("El " + dia + " no es un día laborable."); // Si el día es sábado o domingo.
+            default ->
+                System.out.println("El día introducido no es correcto"); // Si no corresponde a ningún día.
         }
     }
 
