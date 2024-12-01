@@ -77,7 +77,7 @@ public class Ejercicio14a16 {
                     return; // Termina el bucle porque ya se ha determinado que no es primo.
                 }
             }
-            System.out.println("El número " + num + " es un número primo.");
+            System.out.println("El número " + num + " es un número primo."); // Muestra un mensaje indicando que es primo.
         }
     }
 }
