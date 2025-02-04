@@ -19,6 +19,9 @@ public class Rombo {
 
     public void dibujarRombo() { // Método para hacer el rombo.
         int n = num / 2; // Divido el número entre dos, así obtengo el tamaño de la mitad del rombo.
+        if (num % 2 == 0) {
+            num++; // Si es par, incrementa en 1 para hacerlo impar.
+        }
         for (int i = -n; i <= n; i++) { // Bucle For: inicio en '-n' hasta llegar a 'n', para hacer el dibujo.
             int absI = Math.abs(i); // Obtengo el valor absoluto de 'i'.
             System.out.println(" ".repeat(absI) + "*".repeat(num - 2 * absI)); // Imprimo el espacio segundo el valor de absI, e imprimo los asteriscos según el valor correspondiente a la multiplicación de 'absI' por '2' menos 'num'.
