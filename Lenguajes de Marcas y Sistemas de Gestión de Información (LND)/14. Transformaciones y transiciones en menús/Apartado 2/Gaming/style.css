@@ -1,0 +1,275 @@
+/* Reset de márgenes, paddings, border box para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Se define la fuente y color de fondo para el body, y se establece el color del texto */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* El H1 se estiliza con mayúsculas */
+h1 {
+  text-transform: uppercase;
+}
+
+/* Estiliza el menú con un fondo en degradado, espaciado y efectos de sombra. Se alinean los elementos para que haya espacio entre ellos y se mantengan centrados */
+.menu {
+  background: linear-gradient(45deg, #111, #444);
+  color: #fff;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid #00ffcc;
+}
+
+/* Se eliminan los estilos por defecto de las listas dentro del menú y se alinean en una fila */
+.menu ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+/* Se establece el espaciado entre los elementos de la lista y el margen lateral */
+.menu ul li {
+  position: relative;
+  margin: 0 25px;
+}
+
+/* Estiliza los enlaces dentro de cada elemento de la lista, con relleno, bordes redondeados y transiciones para los efectos al pasar el ratón */
+.menu ul li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 12px 22px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+/* Añade una línea decorativa debajo del enlace, que aparece cuando pasas el ratón por encima */
+.menu ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #00ffcc;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+/* Efecto hover: cambia el color, escala, rota y agrega una sombra al enlace */
+.menu ul li a:hover {
+  color: #111;
+  transform: scale(1.1) rotate(2deg);
+  background-color: #00ffcc;
+  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.8);
+}
+
+/* La línea decorativa debajo del enlace aparece cuando pasas el ratón por encima */
+.menu ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilo para los elementos que contienen submenús: se les asigna posición relativa */
+.menu ul li.submenu {
+  position: relative;
+}
+
+/* Estiliza los enlaces dentro de los submenús, añadiendo un fondo más oscuro, bordes redondeados y transiciones para efectos al pasar el ratón */
+.menu ul li.submenu a {
+  padding: 12px 22px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para los submenús: cambia el fondo, color, rotación, sombra y escala */
+.menu ul li.submenu:hover a {
+  background-color: #00ffcc;
+  color: #111;
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.8);
+}
+
+/* Muestra el submenú cuando pasas el ratón por encima del elemento principal */
+.menu ul li.submenu:hover > ul {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Los submenús están ocultos inicialmente con animaciones y sombras */
+.menu ul li.submenu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  min-width: 160px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para los elementos dentro de los submenús: se les añade margen y efectos de transiciones */
+.menu ul li.submenu ul li {
+  display: block;
+}
+
+/* Estiliza los enlaces dentro de los submenús: fondo más oscuro, bordes redondeados, y transiciones para efectos al pasar el ratón */
+.menu ul li.submenu ul li a {
+  padding: 12px 22px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para los enlaces de los submenús: cambia el color de fondo y escala */
+.menu ul li.submenu ul li a:hover {
+  background-color: #00ffcc;
+  color: #111;
+  transform: scale(1.1);
+}
+
+/* Animación para que el submenú aparezca: se desvanece y se mueve desde arriba */
+@keyframes desvaneceSubMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Se aplica un retraso progresivo en la animación de cada elemento dentro del submenú */
+.menu ul li.submenu ul li:nth-child(1) {
+  animation: desvaneceSubMenu 0.4s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.menu ul li.submenu ul li:nth-child(2) {
+  animation: desvaneceSubMenu 0.4s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.menu ul li.submenu ul li:nth-child(3) {
+  animation: desvaneceSubMenu 0.4s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Estilo para el botón de login: color de fondo, bordes redondeados, y transiciones para efectos al pasar el ratón */
+.login {
+  background-color: #00ffcc;
+  color: #333;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Efecto hover para el botón de login: cambio de color, rotación, sombra y espaciado de letras */
+.login:hover {
+  background-color: #00cc99;
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.8);
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+}
+
+/* Animación de pulsación para los enlaces del menú */
+@keyframes pulsacion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Se aplica la animación de pulsación a los enlaces cuando pasas el ratón */
+.menu ul li a:hover {
+  animation: pulsacion 0.5s infinite;
+}
+
+/* Estilo para el div que contiene la animación, centrado en la pantalla */
+.div-animacion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Estilo para el círculo animado: tamaño, color de fondo y animación de rebote */
+.animacion {
+  width: 100px;
+  height: 100px;
+  background-color: #00ffcc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bote 2s infinite;
+}
+
+/* Estilo para el texto dentro del círculo: color, tamaño y rotación continua */
+.animacion-texto {
+  color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  animation: rotar 2s linear infinite;
+}
+
+/* Animación de rebote para el círculo: sube y baja de forma continua */
+@keyframes bote {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-150px);
+  }
+  60% {
+    transform: translateY(-75px);
+  }
+}
+
+/* Animación de rotación continua para el texto dentro del círculo */
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

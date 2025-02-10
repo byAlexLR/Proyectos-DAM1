@@ -1,0 +1,116 @@
+/* Reset de márgenes, paddings, border box para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Se define la fuente y color de fondo para el body, y se establece el color del texto */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* El H1 se estiliza con mayúsculas */
+h1 {
+  text-transform: uppercase;
+}
+
+/* Estilo para el menú principal */
+.menu {
+  background-color: #fff;
+  padding: 10px 0 0;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgb(168, 168, 168);
+}
+
+/* Estilo para la lista del menú */
+.menu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Estilo para los enlaces del menú */
+.trans a,
+.rojo a {
+  font-size: large;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+  transition: color 300ms ease-in-out 300ms, border-color 300ms ease-in-out 300ms;
+}
+
+/* Estilo específico para enlaces "trans" */
+.trans a {
+  color: #333;
+  border-bottom: 2px solid transparent;
+}
+
+/* Estilo específico para enlaces "rojo" */
+.rojo a {
+  color: red;
+}
+
+/* Estilo general para los submenús */
+.submenu {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Estilo para cada bloque dentro del submenú */
+.submenu > div > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilo para la lista dentro del submenú */
+.submenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style: none;
+}
+
+/* Estilo para los enlaces dentro del submenú */
+.submenu li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Hover para enlaces del submenú */
+.submenu li a:hover {
+  color: #3643ba;
+  transition: none;
+}
+
+/* Estilo para el enlace "Ver todos los deportes ➜" */
+.vermas a {
+  color: #3643ba !important;
+  text-decoration: none;
+}
+
+/* Hover para enlaces del menú principal */
+.menu .trans > a:hover {
+  color: #3643ba;
+  border-bottom: 2px solid #3643ba;
+}
+
+/* Mostrar el submenú al pasar por encima de "Deportes" */
+.menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 500ms;
+}
