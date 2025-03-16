@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 - El DOM</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>9. EL DOM (Document Object Model)</h1>
+        <p>El DOM es una interfaz de programación que representa la estructura jerárquica de un documento HTML, permitiendo
+            modificar su contenido, estilo y estructura mediante JavaScript. Fue estandarizado por el W3C (World Wide Web
+            Consortium) y es esencial para dotar de interactividad a las páginas web.
+        </p>
+    
+        <h2>9.1 Estructura de datos del DOM</h2>
+        <p>Cuando un navegador carga una página web, genera un árbol de nodos que representan los elementos del documento
+            HTML. Estos nodos tienen relaciones jerárquicas como padre, hijo y hermano, lo que permite navegar entre ellos y
+            modificarlos dinámicamente.</p>
+        <pre><code>
+            // Accediendo al nodo raíz del documento
+            console.log(document.documentElement);
+        </code></pre>
+    
+        <h2>9.2 Interfaz de programación del DOM</h2>
+        <p>El DOM proporciona una API basada en objetos que permite acceder y manipular elementos HTML. Cada nodo del DOM es
+            un objeto con atributos y métodos específicos.</p>
+    
+        <h3>9.2.1 Nodos</h3>
+        <p>Un nodo es una unidad fundamental del DOM y puede ser de diferentes tipos: <code>document</code> (el nodo raíz),
+            <code>element</code> (etiquetas HTML), <code>text</code> (contenido dentro de las etiquetas) y
+            <code>comment</code> (comentarios en el código).
+        </p>
+        <pre><code>
+            // Creando un nodo de texto y agregándolo a un párrafo
+            let parrafo = document.createElement("p");
+            let texto = document.createTextNode("Hola, DOM");
+            parrafo.appendChild(texto);
+            document.body.appendChild(parrafo);
+        </code></pre>
+    
+        <h3>9.2.2 Elementos HTML</h3>
+        <p>Los nodos de tipo <code>element</code> representan etiquetas HTML y tienen atributos como <code>id</code>,
+            <code>className</code>, <code>tagName</code> e <code>innerHTML</code>, que permiten acceder y modificar su
+            contenido.
+        </p>
+        <pre><code>
+            // Modificando el contenido de un elemento
+            let titulo = document.getElementById("titulo");
+            titulo.innerHTML = "Nuevo título dinámico";
+        </code></pre>
+    
+        <h2>9.3 Acceso a los elementos HTML de un documento HTML</h2>
+        <p>Se pueden obtener elementos HTML del DOM mediante métodos del objeto <code>document</code>:</p>
+        <ul>
+            <li><code>getElementById(id)</code>: Devuelve un elemento por su identificador.</li>
+            <li><code>getElementsByClassName(clase)</code>: Obtiene todos los elementos de una clase específica.</li>
+            <li><code>getElementsByTagName(nombre)</code>: Recupera todos los elementos de un tipo específico.</li>
+            <li><code>querySelector(selector)</code>: Obtiene el primer elemento que coincide con un selector CSS.</li>
+            <li><code>querySelectorAll(selector)</code>: Devuelve todos los elementos que coinciden con un selector CSS.</li>
+        </ul>
+        <pre><code>
+            // Modificando el contenido de un elemento con innerText
+            document.getElementById("miElemento").innerText = "Nuevo texto";
+        </code></pre>
+        
+        <h3>9.3.1 Acceso directo</h3>
+        <p>El acceso directo a los elementos se realiza mediante identificadores únicos (<code>id</code>) o clases CSS. Es el método más eficiente cuando se conoce la estructura del documento.</p>
+        <pre><code>
+            // Cambia el color del párrafo
+            let parrafo = document.getElementById("miParrafo");
+            parrafo.style.color = "blue";
+        </code></pre>
+        
+        <h3>9.3.2 Acceso a través de la estructura del DOM</h3>
+        <p>También es posible navegar a través del DOM utilizando propiedades como <code>parentNode</code>, <code>childNodes</code>, <code>firstChild</code>, <code>lastChild</code> y <code>nextSibling</code>. Esto permite recorrer elementos de manera dinámica.</p>
+        <pre><code>
+            // Navegando por la estructura del DOM
+            let contenedor = document.getElementById("contenedor");
+            console.log(contenedor.firstChild); // Primer hijo del contenedor
+            console.log(contenedor.lastChild);  // Último hijo del contenedor
+        </code></pre>
+    
+        <h2>9.4 Modificación de la estructura de un documento HTML</h2>
+        <p>Se pueden crear, modificar y eliminar elementos en el DOM con métodos como:</p>
+        <ul>
+            <li><code>document.createElement(etiqueta)</code>: Crea un nuevo elemento.</li>
+            <li><code>document.createTextNode(texto)</code>: Crea un nodo de texto.</li>
+            <li><code>elemento.appendChild(nuevoNodo)</code>: Agrega un nodo hijo.</li>
+            <li><code>elemento.remove()</code>: Elimina un elemento del DOM.</li>
+        </ul>
+        <pre><code>
+            // Creando un nuevo div y agregándolo al cuerpo del documento
+            let nuevoDiv = document.createElement("div");
+            nuevoDiv.innerText = "Este es un nuevo div";
+            document.body.appendChild(nuevoDiv);
+        </code></pre>
+    
+        <h2>9.5 Gestión de eventos</h2>
+        <p>JavaScript permite manejar eventos que ocurren en la página web, como clics, cambios de teclado y movimientos del
+            ratón.</p>
+        <pre><code>
+            // Asociando un evento al clic de un botón
+            document.getElementById("boton").addEventListener("click", function() {
+                alert("¡Botón clickeado!");
+            });
+        </code></pre>
+    
+        <h3>9.5.1 Eventos</h3>
+        <p>Los eventos pueden ser disparados por acciones del usuario (clics, escritura en campos de texto) o por eventos
+            del sistema (carga de la página, cambios de estado).</p>
+        <pre><code>
+            // Prevenir el envío de un formulario
+            document.getElementById("miFormulario").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita el envío del formulario
+                alert("Formulario enviado");
+            });
+        </code></pre>
+    
+        <h3>9.5.2 Controladores de eventos</h3>
+        <p>Se pueden asociar eventos a elementos mediante atributos HTML (<code>onclick</code>) o con
+            <code>addEventListener</code>, que permite mayor flexibilidad.
+        </p>
+        <pre><code>
+            // Asociando un evento con addEventListener
+            document.getElementById("inputTexto").addEventListener("keyup", function(event) {
+                console.log("Tecla presionada: " + event.key);
+            });
+        </code></pre>
+    
+        <h3>9.5.3 Prácticas de manejo de eventos</h3>
+        <p>Los eventos son fundamentales para crear aplicaciones interactivas. A continuación, se presentan algunas prácticas comunes:</p>
+        <h4>9.5.3.1 Validación de los datos de un formulario</h4>
+        <p>Los eventos permiten validar formularios antes de enviar los datos, asegurando que cumplan ciertos criterios.</p>
+        <pre><code>
+            // Validación de un campo de texto no vacío
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+                let input = document.getElementById("nombre").value;
+                if (input === "") {
+                    alert("El campo no puede estar vacío");
+                    event.preventDefault();
+                }
+            });
+        </code></pre>
+    
+        <h4>9.5.3.2 Editor gráfico</h4>
+        <p>Se pueden usar eventos del ratón para mover elementos en la página, como en un editor gráfico.</p>
+        <pre><code>
+            // Cambiar el color de fondo de un elemento al hacer clic sobre él
+            document.getElementById("caja").addEventListener("mousedown", function() {
+                this.style.backgroundColor = "red";
+            });
+        </code></pre>
+    
+        <h4>9.5.3.3 Menú contextual</h4>
+        <p>Los eventos pueden mostrar menús contextuales personalizados al hacer clic derecho sobre un elemento.</p>
+        <pre><code>
+            // Mostrar un menú contextual personalizado
+            document.getElementById("area").addEventListener("contextmenu", function(event) {
+                event.preventDefault();
+                alert("Menú contextual personalizado");
+            });
+        </code></pre>
+    
+        <h3>9.5.4 Burbujeo de eventos</h3>
+        <p>El burbujeo de eventos ocurre cuando un evento se propaga desde un elemento hijo hasta sus padres en la jerarquía
+            del DOM, permitiendo capturarlo en distintos niveles.</p>
+        <pre><code>
+            // Evitar el burbujeo de eventos con stopPropagation
+            document.getElementById("contenedor").addEventListener("click", function() {
+                alert("Evento en el contenedor");
+            });
+            document.getElementById("botonInterno").addEventListener("click", function(event) {
+                alert("Evento en el botón interno");
+                event.stopPropagation(); // Evita el burbujeo
+            });
+        </code></pre>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

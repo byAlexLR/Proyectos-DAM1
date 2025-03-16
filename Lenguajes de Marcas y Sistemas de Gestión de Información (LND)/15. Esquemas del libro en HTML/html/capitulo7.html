@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 7 - Funciones</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>7. FUNCIONES</h1>
+        <p>Las funciones son bloques de código reutilizables que realizan tareas específicas, ayudando a la modularidad y
+            reutilización del código. Se definen con la palabra clave <code>function</code>, seguida del nombre de la
+            función y sus argumentos.</p>
+    
+        <pre><code>
+            function nombreFuncion(argumento1, argumento2) {
+                // Código de la función
+            }
+        </code></pre>
+    
+        <h2>7.1 Invocación de una función</h2>
+        <p>Para invocar una función, se utiliza su nombre seguido de paréntesis, dentro de los cuales se pasan los
+            argumentos.</p>
+    
+        <pre><code>
+            function suma(a, b) {
+                return a + b;
+            }
+            
+            // Invocación con argumentos:
+            let resultado = suma(3, 5); // resultado será 8
+        </code></pre>
+    
+        <p>Si no se conoce el número de argumentos, se puede usar la sintaxis de "rest parameters" (<code>...</code>) para
+            recibir una lista de argumentos.</p>
+    
+        <pre><code>
+            function sumar(...listaArgumentos) {
+                let suma = 0;
+                for (let i = 0; i < listaArgumentos.length; i++) {
+                    suma += listaArgumentos[i];
+                }
+                return suma;
+            }
+            
+            let resultado = sumar(1, 2, 3); // resultado será 6
+        </code></pre>
+    
+        <h2>7.2 El tipo de datos Function</h2>
+        <p>Las funciones en JavaScript son valores de tipo <code>Function</code>, lo que significa que pueden ser asignadas
+            a variables y tratadas como cualquier otro valor.</p>
+    
+        <pre><code>
+            // Definir una función y asignarla a una variable de tipo Function.
+            let miSaludo = function(nombre) {
+                return "Hola, " + nombre + "!";
+            };
+    
+            // Invocar la función a través de la variable de tipo Function.
+            let mensaje = miSaludo("Juan"); // mensaje será "Hola, Juan!"
+        </code></pre>
+    
+        <h2>7.3 Alcance de las variables</h2>
+        <p>Las variables en JavaScript pueden tener alcance global o local. Las variables globales son accesibles desde
+            cualquier parte del programa, mientras que las locales solo son accesibles dentro de la función donde se
+            definen.</p>
+    
+        <pre><code>
+            // Variable global
+            let variableGlobal = "Soy global"; 
+            
+            function miFuncion() {
+                // Variable local
+                let variableLocal = "Soy local";
+                
+                // Accede a la variable global
+                console.log(variableGlobal);
+    
+                // Accede a la variable local
+                console.log(variableLocal); 
+            }
+        </code></pre>
+    
+        <p>Las variables locales se destruyen cuando la función termina, mientras que las globales siguen accesibles en
+            otras partes del código.</p>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

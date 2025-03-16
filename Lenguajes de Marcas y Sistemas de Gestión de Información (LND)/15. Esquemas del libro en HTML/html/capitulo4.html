@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 4 - Tipos de Datos Primitivos</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>4. TIPOS DE DATOS PRIMITIVOS EN JAVASCRIPT</h1>
+        <p>JavaScript tiene 7 tipos de datos primitivos, que son los bloques básicos con los que se trabaja en la
+            programación. Estos tipos de datos determinan el conjunto de valores que una variable puede almacenar y las
+            operaciones que se
+            pueden realizar con ellos.</p>
+    
+        <p>En muchos lenguajes de programación, se requiere definir el tipo de una variable al declararla. Sin embargo, en
+            JavaScript, gracias al tipado dinámico, no es necesario especificar el tipo de una variable de antemano.</p>
+    
+        <p>Los tipos de datos en JavaScript se dividen en primitivos (básicos) y compuestos (formados por varios tipos
+            primitivos). Aquí nos enfocamos en los tipos primitivos, que son:</p>
+    
+        <ul>
+            <li><strong>Boolean:</strong> Representa los valores <code>true</code> y <code>false</code>.</li>
+            <li><strong>Number:</strong> Cualquier número, ya sea entero o decimal.</li>
+            <li><strong>BigInt:</strong> Para representar números enteros que superan el rango de <code>Number</code>.</li>
+            <li><strong>String:</strong> Cadenas de caracteres, que pueden ir entre comillas simples o dobles.</li>
+            <li><strong>Null:</strong> Representa la ausencia intencionada de valor, solo puede ser <code>null</code>.</li>
+            <li><strong>Undefined:</strong> Indica que una variable ha sido declarada, pero no se le ha asignado un valor, y
+                solo puede tener el valor <code>undefined</code>.</li>
+        </ul>
+    
+        <p>Además, existe el tipo <strong>Symbol</strong>, que no se aborda en este contexto.</p>
+    
+        <h3>4.1 Boolean</h3>
+        <p>El tipo <strong>Boolean</strong> tiene solo dos posibles valores: <code>true</code> y <code>false</code>. Se
+            utiliza
+            comúnmente en expresiones de comparación o lógica y en estructuras de control condicional, como
+            <code>if...else</code> o <code>switch</code>.
+        </p>
+        <pre><code>
+            let esMayor = true;
+        </code></pre>
+    
+        <h3>4.2 Number</h3>
+        <p>En JavaScript, todos los números (enteros y decimales) pertenecen al tipo <code>Number</code>. Estos números se
+            almacenan como valores de coma flotante de doble precisión (IEEE 754), lo que significa que ocupan 64 bits de
+            memoria. Aunque este formato ofrece una precisión bastante alta, existen límites que pueden provocar redondeo en
+            ciertos casos. Para trabajar con números más grandes sin perder precisión, se puede usar <code>BigInt</code>.
+        </p>
+        <pre><code>
+            // Entero
+            let edad = 30;
+            
+            // Decimal
+            let precio = 99.99;
+            
+            // BigInt
+            let numeroGrande = 1234567890123456789012345678901234567890n;
+        </code></pre>
+    
+        <h3>4.3 String</h3>
+        <p>El tipo <strong>String</strong> se usa para representar secuencias de caracteres. Estas cadenas pueden estar
+            delimitadas por comillas simples o dobles, y pueden incluir caracteres alfanuméricos o secuencias de escape
+            como:
+        </p>
+        <ul>
+            <li><code>\b</code> (retroceso)</li>
+            <li><code>\n</code> (salto de línea)</li>
+            <li><code>\r</code> (retorno de carro)</li>
+            <li><code>\t</code> (tabulador)</li>
+        </ul>
+        <pre><code>
+            // Cadena con comillas dobles
+            let nombre = "Juan";
+    
+            // Cadena con comillas simples
+            let apellido = 'Pérez';
+    
+            // Cadena con secuencias de escape
+            let mensaje = "Hola, \n¿cómo estás?";
+    
+            // Cadena con comillas simples dentro de comillas dobles y viceversa
+            let frase = 'Ella dijo: "Hola"';
+        </code></pre>
+    
+        <h3>4.4 Null y Undefined</h3>
+        <p>El valor <code>null</code> indica la ausencia intencionada de valor, mientras que <code>undefined</code> se
+            refiere a una variable que ha sido declarada pero no ha sido inicializada. Aunque ambos pueden indicar "vacío",
+            tienen significados distintos: <code>null</code> es un valor explícito, mientras que <code>undefined</code> es
+            el valor por defecto en variables no inicializadas.</p>
+        <pre><code>
+            // Variable con valor null
+            let valorNulo = null;
+    
+            // Variable sin inicializar (valor undefined)
+            let valorIndefinido;
+        </code></pre>
+    
+        <h3>4.5 Conversión entre Tipos de Datos</h3>
+        <p>JavaScript permite la conversión entre diferentes tipos de datos primitivos mediante funciones globales. A
+            continuación, algunos ejemplos:</p>
+    
+        <h3>4.5.1 Conversión a Números</h3>
+        <p>Convertir una cadena a número con la función <code>Number()</code>:</p>
+        <pre><code>
+            let numero = Number("42"); // Devuelve 42
+    
+            // Otra forma de convertir a número es usando parseInt
+            let numeroEntero = parseInt("42"); // Devuelve 42
+    
+            // O usando parseFloat para números decimales
+            let numeroDecimal = parseFloat("3.14"); // Devuelve 3.14
+        </code></pre>
+    
+        <h3>4.5.2 Conversión a Cadenas</h3>
+        <p>Convertir un número a cadena con la función <code>String()</code>:</p>
+        <pre><code>
+            let texto = String(123); // Devuelve "123"
+    
+            //Otra forma de convertir a cadena es usando toFixed
+            let numero = 3.14159;
+            let textoDecimal = numero.toFixed(2); // Devuelve "3.14"
+    
+            //Otra forma de convertir a cadena es usando toExponential
+            let textoExponencial = numero.toExponential(2); // Devuelve "3.14e+0"
+    
+            //Otra forma de convertir a cadena es usando toPrecision
+            let textoPrecision = numero.toPrecision(2); // Devuelve "3.1"
+    
+        </code></pre>
+    
+        <h3>4.5.3 Conversión a Booleanos</h3>
+        <p>Convertir valores a booleanos con la función <code>Boolean()</code>. Ejemplos:</p>
+        <pre><code>
+            Boolean(0); // Devuelve false
+            Boolean(1); // Devuelve true
+        </code></pre>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

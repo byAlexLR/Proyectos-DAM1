@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 - Objetos</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>8. OBJETOS</h1>
+        <p>JavaScript es un lenguaje orientado a objetos donde todo puede representarse como un objeto, ya sea físico o
+            conceptual. Los objetos se definen por <strong>propiedades</strong> (atributos) y <strong>métodos</strong>
+            (acciones que pueden realizar). Esto permite estructurar mejor los programas, representando entidades del mundo
+            real mediante un modelo de datos que facilita su manipulación.</p>
+    
+        <h2>8.1 Propiedades</h2>
+        <p>Las propiedades son características de un objeto y pueden almacenar valores primitivos u otros objetos. Se accede
+            a ellas mediante la notación punto <code>objeto.propiedad</code> o con corchetes
+            <code>objeto["propiedad"]</code>. Además, JavaScript permite agregar, modificar o eliminar propiedades
+            dinámicamente, lo que da flexibilidad a la estructura de los objetos.</p>
+        <pre><code>
+            const coche = {
+                marca: "Ferrari",
+                modelo: "Testarossa",
+                potencia: 400
+            };
+            console.log(coche.marca); // "Ferrari"
+        </code></pre>
+        <p>También pueden modificarse o agregarse dinámicamente:</p>
+        <pre><code>
+            coche.color = "Rojo";
+            delete coche.potencia;
+        </code></pre>
+    
+        <h2>8.2 Métodos</h2>
+        <p>Los métodos son funciones asociadas a un objeto y definen su comportamiento. Un método puede utilizar la palabra
+            clave <code>this</code> para acceder a otras propiedades dentro del mismo objeto, lo que permite una mejor
+            encapsulación de la lógica.</p>
+        <pre><code>
+            const coche = {
+                marca: "Ferrari",
+                modelo: "Testarossa",
+                mostrarDatos() {
+                    // Utiliza "this" para acceder a las propiedades del objeto
+                    return `${this.marca} ${this.modelo}`;
+                }
+            };
+            console.log(coche.mostrarDatos());
+        </code></pre>
+        <p>También pueden añadirse o eliminarse dinámicamente:</p>
+        <pre><code>
+            coche.arrancar = function() {
+                return "El coche ha arrancado.";
+            };
+            delete coche.mostrarDatos;
+        </code></pre>
+    
+        <h2>8.3 La Función Constructora</h2>
+        <p>Permite crear múltiples objetos con una estructura común. Es útil cuando se necesita instanciar muchos objetos
+            similares sin repetir código. Al utilizar una función constructora, se pueden definir propiedades y métodos
+            comunes para los objetos creados con <code>new</code>.</p>
+        <pre><code>
+            function Coche(marca, modelo, potencia) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.potencia = potencia;
+                this.mostrarDatos = function() {
+                    return `${this.marca} ${this.modelo}`;
+                };
+            }
+            const miCoche = new Coche("BMW", "320i", 140);
+            console.log(miCoche.mostrarDatos());
+        </code></pre>
+    
+        <h2>8.4 Mutabilidad</h2>
+        <p>Los objetos en JavaScript son mutables, lo que permite modificar sus propiedades sin cambiar su identidad. Esto
+            significa que al asignar un objeto a otra variable, ambas hacen referencia al mismo objeto en memoria.</p>
+        <pre><code>
+            const miCoche = new Coche("Audi", "A4", 180);
+            miCoche.potencia = 200;  // Se modifica la propiedad
+        </code></pre>
+        <p>Si se asigna un objeto a otra variable, ambas referencias apuntan al mismo objeto.</p>
+        <pre><code>
+            const otroCoche = miCoche;
+            otroCoche.potencia = 250;
+            console.log(miCoche.potencia); // 250
+        </code></pre>
+    
+        <h2>8.5 Objetos Globales</h2>
+        <p>JavaScript proporciona varios objetos globales que están integrados en el lenguaje, como <code>Array</code>,
+            <code>String</code>, <code>Date</code> y <code>Math</code>. Estos objetos facilitan operaciones comunes y
+            optimizan el manejo de datos.</p>
+    
+        <h3>8.5.1 El objeto Array</h3>
+        <p>Los arrays permiten almacenar listas de valores ordenados y acceder a ellos mediante índices. Además, JavaScript
+            ofrece una gran cantidad de métodos para manipular arrays de manera eficiente.</p>
+        <pre><code>
+            let numeros = [1, 2, 3, 4];
+            numeros.push(5);
+            numeros.pop();
+        </code></pre>
+    
+        <h3>8.5.1.1 Acceso a los elementos de un array</h3>
+        <p>Los elementos de un array se acceden mediante su índice, comenzando desde 0. También se pueden modificar de forma
+            directa usando la misma notación.</p>
+        <pre><code>
+            let numeros = [1, 2, 3, 4];
+    
+            // Accede al primer elemento
+            console.log(numeros[0]); // 1
+    
+            // Modifica el primer elemento
+            numeros[0] = 10; 
+        </code></pre>
+    
+        <h3>8.5.1.2 Uso de arrays como colas o stacks</h3>
+        <p>Un array puede actuar como una estructura de datos de tipo pila (LIFO) o cola (FIFO), usando métodos como
+            <code>push()</code>, <code>pop()</code>, <code>shift()</code> y <code>unshift()</code>.</p>
+        <pre><code>
+            // Agrega al inicio
+            numeros.unshift(0);
+    
+            // Elimina el primer elemento
+            numeros.shift(); 
+    
+            // Agrega al final
+            numeros.push(0);
+    
+            // Elimina el último elemento
+            numeros.pop();
+        </code></pre>
+    
+        <h3>8.5.1.3 Métodos de unión, división y transformación de arrays</h3>
+        <p>JavaScript permite manipular arrays mediante métodos como <code>concat()</code> para unir arrays,
+            <code>slice()</code> para extraer porciones y <code>map()</code> para transformar elementos.</p>
+        <pre><code>
+            let pares = [2, 4, 6];
+            let impares = [1, 3, 5];
+    
+            // Une ambos arrays
+            let numeros = pares.concat(impares);
+    
+            // Extrae elementos del índice 1 al 3
+            let parte = numeros.slice(1, 4);
+    
+            // Transforma cada elemento al cuadrado
+            let cuadrados = numeros.map(x => x * x);
+        </code></pre>
+    
+        <h3>8.5.2.1 Acceso a los caracteres de una cadena</h3>
+        <p>Las cadenas de texto son indexadas como los arrays, lo que permite acceder a caracteres individuales utilizando
+            índices.</p>
+        <pre><code>
+            let texto = "JavaScript";
+    
+            // Accede al primer carácter
+            console.log(texto.charAt(0)); // "J"
+            
+            // Accede al segundo carácter usando corchetes
+            console.log(texto[1]); // "a"
+        </code></pre>
+    
+        <h3>8.5.3.1 Métodos de manejo de fechas</h3>
+        <p>El objeto <code>Date</code> incluye métodos para extraer información específica como el año, mes o día, así como
+            para realizar cálculos con fechas.</p>
+        <pre><code>
+            // Crea un objeto Date con la fecha y hora actuales
+            let fecha = new Date();
+    
+            // Año actual
+            console.log(fecha.getFullYear());
+    
+            // Mes actual (0-11)
+            console.log(fecha.getMonth()); 
+        </code></pre>
+    
+        <h3>8.5.4 El objeto Math</h3>
+        <p>El objeto <code>Math</code> proporciona funciones matemáticas avanzadas, como generación de números aleatorios y
+            cálculo de potencias.</p>
+        <pre><code>
+            // Genera un número aleatorio entre 0 y 1
+            console.log(Math.random());
+    
+            // Calcula 2 elevado a la 3ª potencia
+            console.log(Math.pow(2, 3));
+        </code></pre>
+    </main>
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

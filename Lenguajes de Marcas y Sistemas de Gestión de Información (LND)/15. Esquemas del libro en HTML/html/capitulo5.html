@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 5 - Operadores</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>5. OPERADORES</h1>
+        <p>En JavaScript, los operadores son símbolos que permiten realizar operaciones sobre los valores de las
+            variables. Estos operadores se dividen en diversas categorías según su funcionalidad.</p>
+
+        <h2>5.1 Operadores Aritméticos</h2>
+        <p>Realizan operaciones matemáticas básicas. Ejemplo:</p>
+        <pre><code>
+            let suma = 5 + 3; // Suma
+            let multiplicacion = 8 * 2; // Multiplicación
+        </code></pre>
+        <ul>
+            <li><code>+</code>: Suma o concatenación</li>
+            <li><code>-</code>: Resta</li>
+            <li><code>*</code>: Multiplicación</li>
+            <li><code>/</code>: División</li>
+            <li><code>%</code>: Resto</li>
+            <li><code>**</code>: Exponenciación</li>
+            <li><code>++</code>: Incremento</li>
+            <li><code>--</code>: Decremento</li>
+        </ul>
+
+        <h2>5.2 Operadores de Asignación</h2>
+        <p>Asignan valores a las variables. Ejemplo:</p>
+        <pre><code>
+            let x = 10;
+            x += 5; // x ahora es 15
+        </code></pre>
+        <ul>
+            <li><code>=</code>: Asignación simple</li>
+            <li><code>+=</code>: Asignación con suma</li>
+            <li><code>-=</code>: Asignación con resta</li>
+            <li><code>*=</code>: Asignación con multiplicación</li>
+            <li><code>/=</code>: Asignación con división</li>
+            <li><code>**=</code>: Asignación con exponenciación</li>
+            <li><code>%=</code>: Asignación con resto</li>
+        </ul>
+
+        <h2>5.3 Operadores de Comparación</h2>
+        <p>Comparan dos valores y devuelven <code>true</code> o <code>false</code>.</p>
+        <pre><code>
+            let esIgual = 5 == "5"; // true
+            let esEstricto = 5 === "5"; // false
+        </code></pre>
+        <ul>
+            <li><code>==</code>: Igualdad</li>
+            <li><code>===</code>: Igualdad estricta (valor y tipo)</li>
+            <li><code>!=</code>: Desigualdad</li>
+            <li><code>!==</code>: Desigualdad estricta</li>
+            <li><code><</code>, <code><=</code>, <code>></code>, <code>>=</code>: Comparaciones numéricas</li>
+        </ul>
+
+        <h2>5.4 Operadores Lógicos</h2>
+        <p>Aplican álgebra booleana para evaluar expresiones.</p>
+        <pre><code>
+            let and = true && false; // false
+            let or = true || false; // true
+            let not = !true; // false
+        </code></pre>
+        <ul>
+            <li><code>&&</code>: AND lógico</li>
+            <li><code>||</code>: OR lógico</li>
+            <li><code>!</code>: NOT lógico</li>
+        </ul>
+
+        <h2>5.5 Operador Condicional (Ternario)</h2>
+        <p>Evalúa una condición y devuelve uno de dos valores según el resultado.</p>
+        <pre><code>
+            let acceso = edad >= 18 ? "Permitido" : "Denegado";
+        </code></pre>
+
+        <h2>5.6 Operador <code>typeof</code></h2>
+        <p>Devuelve el tipo de un valor.</p>
+        <pre><code>
+            typeof "Hola"; // "string"
+        </code></pre>
+
+        <h2>5.7 Precedencia de Operadores</h2>
+        <p>La precedencia determina el orden de ejecución de los operadores. Ejemplo:</p>
+        <pre><code>
+            let resultado = 2 + 3 * 4; // 14 (multiplicación primero)
+        </code></pre>
+        <p>Lista de precedencia de operadores:</p>
+        <ul>
+            <li><code>()</code>: Paréntesis</li>
+            <li><code>++</code>, <code>--</code>: Incremento y decremento</li>
+            <li><code>!</code>, <code>~</code>, <code>typeof</code>: Negación y tipo</li>
+            <li><code>**</code>: Exponenciación</li>
+            <li><code>*</code>, <code>/</code>, <code>%</code>: Multiplicación, división y resto</li>
+            <li><code>+</code>, <code>-</code>: Adición y sustracción</li>
+            <li><code><</code>, <code><=</code>, <code>></code>, <code>>=</code>: Comparación</li>
+            <li><code>==</code>, <code>!=</code>, <code>===</code>, <code>!==</code>: Igualdad</li>
+            <li><code>?:</code>: Condicional</li>
+            <li><code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>,
+                <code>**=</code>: Asignación</li>
+        </ul>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

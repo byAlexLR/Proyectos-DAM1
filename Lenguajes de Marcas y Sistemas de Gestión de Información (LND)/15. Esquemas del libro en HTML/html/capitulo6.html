@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 6 - Sentencias de Control de Flujo</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>6. Sentencias de Control de Flujo</h1>
+        <p>Las sentencias de control de flujo permiten modificar la ejecución de un programa dependiendo de condiciones
+            específicas. En JavaScript, estas incluyen <code>if...else</code>, <code>switch</code>, y bucles como
+            <code>for</code>, <code>while</code>, y <code>do...while</code>.</p>
+    
+        <h2>6.1 if...else</h2>
+        <p>La sentencia <code>if...else</code> ejecuta un bloque de código si una condición es verdadera y otro si es falsa.
+        </p>
+        <pre><code>
+            // Cuando edad sea mayor o igual a 18, imprime "Mayor de edad".
+            if (edad >= 18) { 
+                console.log("Mayor de edad");
+            //  Sino, imprime "Menor de edad".
+            } else { 
+                console.log("Menor de edad");
+            }
+        </code></pre>
+    
+        <h2>6.2 switch...case</h2>
+        <p><code>switch...case</code> evalúa una expresión y ejecuta el bloque correspondiente al valor coincidente de los
+            <code>case</code>. Si no coincide con ninguno, se ejecuta el bloque <code>default</code>.</p>
+        <pre><code>
+            // Según elvalor de la variable dia, imprime un mensaje diferente.
+            switch (dia) {
+                case "lunes":
+                    console.log("Hoy es lunes");
+                    break;
+                case "martes":
+                    console.log("Hoy es martes");
+                    break;
+                // Si no coincide con ningún caso, imprime "Día desconocido".
+                default:
+                    console.log("Día desconocido");
+            }
+        </code></pre>
+    
+        <h2>6.3 for</h2>
+        <p>El bucle <code>for</code> ejecuta un bloque de código un número determinado de veces, ideal para iterar sobre
+            arrays o realizar acciones repetitivas.</p>
+        <pre><code>
+            // El bucle se ejecuta 5 veces, desde i = 0 hasta i = 4.
+            for (let i = 0; i < 5; i++) {
+                // Imprime los números del 0 al 4.
+                console.log(i); 
+            }
+        </code></pre>
+    
+        <h2>6.4 while y do...while</h2>
+        <p><code>while</code> ejecuta un bloque de código mientras una condición sea verdadera. <code>do...while</code>
+            garantiza que el código se ejecute al menos una vez.</p>
+        <pre><code>
+        let i = 0;
+        while (i < 5) { // El bucle se ejecuta 5 veces, desde i = 0 hasta i = 4.
+            // Imprime los números del 0 al 4. 
+            console.log(i);
+            // Incrementa en 1 la variable i.
+            i++; 
+        }
+        </code></pre>
+        <pre><code>
+        let i = 0;
+        // El bucle se ejecuta una vez al menos.
+        do {
+            // Imprime los números del 0 al 4. 
+            console.log(i);
+            // Incrementa en 1 la variable i.
+            i++;
+        // El bucle se ejecuta 5 veces, desde i = 0 hasta i = 4.
+        } while (i < 5); 
+        </code></pre>
+    
+        <h2>6.5 break y continue</h2>
+        <p>La sentencia <code>break</code> sale de un bucle, mientras que <code>continue</code> salta a la siguiente
+            iteración sin ejecutar el código restante en el bucle.</p>
+        <pre><code>
+        for (let i = 0; i < 10; i++) {
+            // Se sale del bucle cuando i es 5.
+            if (i === 5) break;
+            console.log(i);
+        }
+        </code></pre>
+        <pre><code>
+        for (let i = 0; i < 10; i++) {
+            // No se imprime cuando i es 5 y continúa con la siguiente iteración.
+            if (i === 5) continue;
+            console.log(i);
+        }
+        </code></pre>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

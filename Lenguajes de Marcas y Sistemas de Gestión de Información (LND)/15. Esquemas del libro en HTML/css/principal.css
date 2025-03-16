@@ -1,0 +1,41 @@
+/* Contenedor principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para los títulos dentro del contenedor principal */
+main h2 {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de la sección */
+section {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: 2rem;
+  margin: 6rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  max-width: 70%;
+}
+
+/* Estilos para los títulos dentro de la sección */
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primario-color);
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+/* Estilos para los párrafos dentro de la sección */
+section p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}

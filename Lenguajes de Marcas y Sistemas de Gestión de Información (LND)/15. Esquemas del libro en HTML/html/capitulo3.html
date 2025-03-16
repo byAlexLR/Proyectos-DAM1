@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 3 - Variables y Constantes</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Estilo de la página-->
+    <link rel="stylesheet" href="../css/capitulos.css">
+</head>
+
+<body>
+    <!-- Menú con los capítulos del libro -->
+    <header>
+        <nav>
+            <h1>JavaScript Como Nunca Antes Se Lo Habían Contado - Tomás Domínguez Mínguez</h1>
+            <h2>Adaptación web por Alejandro Lorenzo Rodríguez</h2>
+            <ul>
+                <li><a href="../index.html" target="_parent">Inicio</a></li>
+                <li><a href="../html/capitulo1.html" target="_parent">Capítulo 1</a></li>
+                <li><a href="../html/capitulo2.html" target="_parent">Capítulo 2</a></li>
+                <li><a href="../html/capitulo3.html" target="_parent">Capítulo 3</a></li>
+                <li><a href="../html/capitulo4.html" target="_parent">Capítulo 4</a></li>
+                <li><a href="../html/capitulo5.html" target="_parent">Capítulo 5</a></li>
+                <li><a href="../html/capitulo6.html" target="_parent">Capítulo 6</a></li>
+                <li><a href="../html/capitulo7.html" target="_parent">Capítulo 7</a></li>
+                <li><a href="../html/capitulo8.html" target="_parent">Capítulo 8</a></li>
+                <li><a href="../html/capitulo9.html" target="_parent">Capítulo 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido del capítulo -->
+    <main>
+        <h1>3. VARIABLES Y CONSTANTES</h1>
+        <p>Las variables son espacios de memoria que almacenan información que puede cambiar durante la ejecución del
+            programa, mientras que las constantes mantienen un valor fijo e inalterable una vez asignado.</p>
+    
+        <h2>3.1 Variables</h2>
+        <p>Las variables en JavaScript se declaran con <code>let</code> o <code>var</code>, siendo <code>let</code>
+            preferido para el ámbito de bloque. Aunque <code>var</code> es compatible con versiones anteriores,
+            <code>let</code> es más seguro para evitar errores. Las variables pueden declararse y asignarse en una sola
+            línea:</p>
+        <pre><code>
+            let nombre = "Juan";
+            var edad = 30;
+        </code></pre>
+        <p>Es recomendable usar la nomenclatura <strong>camelCase</strong> para nombrar variables compuestas, como
+            <code>nombreLargoDeVariable</code>.</p>
+    
+        <h2>3.2 Constantes</h2>
+        <p>Las constantes se declaran con <code>const</code> y su valor no puede cambiar después de la asignación inicial.
+            Es obligatorio asignar un valor al declarar una constante:</p>
+        <pre><code>
+            const PI = 3.1416;
+        </code></pre>
+        <p>Intentar modificar el valor de una constante como <code>PI</code> generará un error.</p>
+    </main>
+    <!-- Pie de página ---->
+    <footer>
+        <a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>
