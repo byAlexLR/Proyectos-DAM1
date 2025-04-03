@@ -54,17 +54,24 @@ let clasificaciones = ["Ana", "Oswaldo", "Raúl", "Celia", "María", "Antonio"];
 // Muestra por consola la clasificación inicial
 console.log("Clasificación inicial:", clasificaciones);
 
-// Extrae a Celia del array y lo guarda en una variable
-let celia = clasificaciones.splice(clasificaciones.indexOf("Celia"), 1)[0];
-
-// Inserta a Celia en la posición de Raúl
-clasificaciones.splice(clasificaciones.indexOf("Raúl"), 0, celia);
+// Mueve a Celia delante de Raúl
+clasificaciones.push(clasificaciones.shift());
+clasificaciones.push(clasificaciones.shift());
+clasificaciones.shift();
+clasificaciones.push("Celia"); 
+clasificaciones.push("Raúl");
+clasificaciones.shift();
+clasificaciones.push(clasificaciones.shift());
+clasificaciones.push(clasificaciones.shift());
 
 // Elimina el último elemento de la clasificación, es decir, Antonio
-clasificaciones.pop("Antonio");
+clasificaciones.pop();
 
-// Detrás de Ana y antes de Oswaldo, inserta a Roberto y Amaya
-clasificaciones.splice(1, 0, "Roberto", "Amaya");
+// Agrega a Roberto y Amaya después de Ana
+clasificaciones.push(clasificaciones.shift()); // Ana al final
+clasificaciones.unshift("Amaya"); // Agregar Amaya al principio
+clasificaciones.unshift("Roberto"); // Agregar Roberto al principio
+clasificaciones.unshift(clasificaciones.pop()); // Mover Ana al principio
 
 // Inserta a Marta al principio de la clasificación
 clasificaciones.unshift("Marta");
