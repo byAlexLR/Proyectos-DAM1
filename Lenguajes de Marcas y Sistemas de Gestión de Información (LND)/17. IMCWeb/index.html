@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <!-- Estilos y JavaScript -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>4.08 Actividad - Índice de Masa Corporal</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calculadora de IMC</h2>
+            <div class="apartado">
+                <label for="altura">Altura</label>
+                <div class="box-input">
+                    <input type="number" id="altura" name="altura" placeholder="Ej: 170" required>
+                    <span class="unidad">cm</span>
+                </div>
+            </div>
+            <div class="apartado">
+                <label for="peso">Peso</label>
+                <div class="box-input">
+                    <input type="number" id="peso" name="peso" step="0.01" placeholder="Ej: 80" required>
+                    <span class="unidad">kg</span>
+                </div>
+            </div>
+            <button type="button" onclick="calcularIMC()">Calcular</button>
+            <div class="resultado" id="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <p><a href="https://github.com/byAlexLR" target="_blank">byAlexLR</a></p>
+        <p>Lenguajes de Marcas - 1º CFGS DAM</p>
+    </footer>
+</body>
+
+</html>

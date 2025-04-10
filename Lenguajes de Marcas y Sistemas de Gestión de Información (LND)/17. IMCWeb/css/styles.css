@@ -1,0 +1,177 @@
+/* Definición de variables globales */
+:root {
+  --text-color: #333;
+  --font-family: Arial, Helvetica, sans-serif;
+  --segunda-font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --primario-color: #0a0a0a;
+  --secundario-color: #7fffd4;
+  --background-color: #f4f4f4;
+}
+
+/* Reseteo de margenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Estilos para los enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Estilos para el header y footer */
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primario-color);
+  color: #fff;
+  text-align: center;
+}
+
+/* Estilos específicos para el header */
+header {
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Contenedor principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para los títulos dentro del contenedor principal */
+main h2 {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de la sección */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: 2rem;
+  margin: 6rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  max-width: 70%;
+}
+
+/* Estilos para los títulos dentro de la sección */
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primario-color);
+  margin-bottom: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Estilos para los apartados dentro de la sección */
+.apartado {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Estilos para los subapartados dentro de cada apartado */
+.box-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Estilos para los inputs dentro de box-imput */
+.box-input input {
+  padding: 8px;
+  font-size: 1rem;
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Estilos del span que marca el tipo de unidad*/
+.unidad {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilos del botón de calcular*/
+button[type="button"] {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--secundario-color);
+  border: none;
+  border-radius: 50px;
+  width: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="button"]:hover {
+  background-color: #2ffdbc;
+}
+
+/* Estilos para el resultado*/
+.resultado {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primario-color);
+}
+
+/* Estilos para el footer */
+footer {
+  font-size: 1em;
+  font-weight: 500;
+  justify-content: space-around;
+  margin-top: auto;
+  padding: 15px 0;
+}
+
+/* Estilos para el footer */
+footer {
+  font-size: 1em;
+  font-weight: 500;
+  justify-content: space-around;
+  margin-top: auto;
+  padding: 15px 0;
+  font-family: var(--segunda-font-family);
+}
+
+/* Estilos para los enlaces en el footer */
+footer a {
+  color: #fff;
+}
+
+/* Estilos para los párrafos dentro del footer */
+footer p {
+  margin: 5px 0;
+}
+
+/* Estilo para los enlaces del footer al pasar el cursor por encima */
+footer a:hover {
+  color: var(--secundario-color);
+}
