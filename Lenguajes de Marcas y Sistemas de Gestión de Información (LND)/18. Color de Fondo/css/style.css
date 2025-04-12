@@ -1,0 +1,43 @@
+/* Reset de estilos para evitar problemas de compatibilidad*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  height: 100vh;
+}
+
+/* Estilo para el h1 del Div*/
+.divCambioColor h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para el Div*/
+.divCambioColor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem groove #000;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para el Div cuando se hace click*/
+#cambioColor {
+  background-color: #000000;
+}
