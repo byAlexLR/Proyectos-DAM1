@@ -28,10 +28,7 @@ public class Main {
         personas.add(new Persona("Antía", 27));
 
         // Declaración e inicialización de las variables de escritura y lectura.
-        try (FileOutputStream fos = new FileOutputStream("personas.dat");
-             ObjectOutputStream salida = new ObjectOutputStream(fos);
-             FileInputStream fis = new FileInputStream("personas.dat");
-             ObjectInputStream entrada = new ObjectInputStream(fis)) {
+        try (FileOutputStream fos = new FileOutputStream("personas.dat"); ObjectOutputStream salida = new ObjectOutputStream(fos); FileInputStream fis = new FileInputStream("personas.dat"); ObjectInputStream entrada = new ObjectInputStream(fis)) {
 
             // Escribe el ArrayList completo en el fichero.
             salida.writeObject(personas);
