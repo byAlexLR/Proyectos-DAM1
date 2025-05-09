@@ -1,0 +1,34 @@
+/* Tarjetas en tres columnas */
+@media screen and (max-width: 1000px) {
+  .resultado #ciudades {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px 20px;
+  }
+}
+
+/* Tarjetas en dos columnas y buscador en columna */
+@media screen and (max-width: 700px) {
+  .buscador form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buscador form input,
+  .buscador form button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .resultado #ciudades {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 15px;
+  }
+}
+
+/* Tarjetas en una columna */
+@media screen and (max-width: 500px) {
+  .resultado #ciudades {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+}

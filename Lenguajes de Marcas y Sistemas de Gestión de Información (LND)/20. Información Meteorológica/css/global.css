@@ -1,0 +1,211 @@
+/* Estilos para las imágenes */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo básico para botones */
+button {
+  cursor: pointer;
+}
+
+/* Estilos comunes para botones e inputs */
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Estilos generales */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  background: var(--background-color);
+  color: var(--text-color-3);
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Estilos comunes del Header y Footer */
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-color-2);
+  color: var(--text-color-3);
+  text-align: center;
+}
+
+/* Estilos del Header */
+header {
+  text-transform: uppercase;
+  padding: 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Estilos del Footer */
+footer {
+  font-size: 1em;
+  font-weight: 600;
+  justify-content: space-around;
+  margin-top: auto;
+  padding: 10px 0;
+  font-family: var(--secondary-font-family);
+}
+
+/* Enlaces y párrafos del Footer */
+footer a {
+  color: var(--text-color-3);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--text-color-4);
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Estilos del Contenido Principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos del buscador */
+.buscador {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Estilos del Input y Botón */
+.buscador form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Campo de búsqueda */
+.buscador form input {
+  font-size: 1.5rem;
+  height: 40px;
+  padding: 5px 10px;
+  border-bottom: 2px solid var(--text-color);
+  background: transparent;
+  color: var(--text-color);
+  margin-right: 10px;
+}
+
+/* Placeholder del input */
+.buscador form input::placeholder {
+  color: var(--text-color);
+}
+
+/* Botón de búsqueda */
+.buscador form button {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  transition: background 0.3s ease-in-out;
+}
+
+.buscador form button:hover {
+  background: var(--secondary-color);
+}
+
+/* Mensaje de error debajo del formulario */
+.buscador #error {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Estilos para el resultado */
+.resultado {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Grid para las tarjetas de ciudades */
+.resultado #ciudades {
+  display: grid;
+  grid-gap: 32px 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tarjeta individual */
+.resultado .ciudad {
+  position: relative;
+  padding: 40px 40px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: var(--text-color-3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Detalles de la figura y descripción */
+.resultado figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Temperatura resaltada */
+.resultado .tiempo {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text-color-3);
+}
+
+/* Estilo para el país */
+.resultado .ciudad sup {
+  font-size: 0.5em;
+}
+
+/* Nombre de la ciudad con estilo */
+.resultado .ciudad-nombre sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text-color);
+  background: var(--text-color-4);
+}
+
+/* Icono representativo del clima */
+.resultado .ciudad-icono {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}

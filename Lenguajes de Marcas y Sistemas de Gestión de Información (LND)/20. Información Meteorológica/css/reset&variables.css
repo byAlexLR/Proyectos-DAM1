@@ -1,0 +1,24 @@
+:root {
+  /* Variables de colores */
+  --primary-color: #ff1e42;
+  --secondary-color: #c3112d;
+  --background-color: #0a1f44;
+  --background-color-2: #f4f4f4;
+
+  /* Variables de texto */
+  --text-color: #fff;
+  --text-color-2: #53627c;
+  --text-color-3: #1e2432;
+  --text-color-4: #ff8c00;
+
+  /* Variables de fuentes */
+  --font-family: Arial, Helvetica, sans-serif;
+  --secondary-font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Reset márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
